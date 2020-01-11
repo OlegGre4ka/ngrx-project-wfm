@@ -13,6 +13,7 @@ const initialState = {
 export function carsReducer (state = initialState, action:AddCar){
 switch(action.type){
     case CAR_ACTION.ADD_CAR :
+        // console.log( {...state} ,'...state in reducer');
         return{
             ...state,
             cars: [...state.cars, action.payload]
