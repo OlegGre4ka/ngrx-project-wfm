@@ -2,7 +2,7 @@ import { Action } from '@ngrx/store';
 import { Car } from '../shared/models/Car.model';
 
 export namespace CAR_ACTION {
-    export const ADD_CAR = ""
+    export const ADD_CAR = "ADD_CAR"
 }
 
 export class AddCar implements Action {
