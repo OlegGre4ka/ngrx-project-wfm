@@ -1,11 +1,14 @@
 <h1>Angular + NgRx</h1>
 <div class="container">
 
-  <app-cars-form></app-cars-form>
+  <app-cars-form (addCar)="onAdd($event)"></app-cars-form>
 
   <div class="list-group">
 
-    <app-car *ngFor="let c of [1,2,3,4]" class="mt-4"></app-car>
+    <app-car 
+    [car]="c"
+    (deleteCar)="onDelete($event)"
+    *ngFor="let c of cars" class="mt-4"></app-car>
     <!-- <a href="#" class="list-group-item list-group-item-action active">
       <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">List group item heading</h5>
